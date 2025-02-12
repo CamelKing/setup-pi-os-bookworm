@@ -20,9 +20,9 @@ function Install_Desktop_Config {
     local _lxterm_conf_dir="$HOME/.config/lxterminal"
     local _lxterm_conf="$_lxterm_conf_dir/$_lxterm_conf_file"
 
-    local _menu_conf_file="lxde-pi-applications.menu"
-    local _menu_conf_dir="$HOME/.config/menus"
-    local _menu_conf="$_menu_conf_dir/$_menu_conf_file"
+    # local _menu_conf_file="lxde-pi-applications.menu"
+    # local _menu_conf_dir="$HOME/.config/menus"
+    # local _menu_conf="$_menu_conf_dir/$_menu_conf_file"
 
     local _dirs_to_create=( \
         "$_sys_desktop_dir" \
@@ -30,12 +30,12 @@ function Install_Desktop_Config {
 
     local _backup_from=( \
         "$_lxterm_conf" \
-        "$_menu_conf" \
+    #    "$_menu_conf" \
     )
 
     local _backup_to=( \
         "$_lxterm_conf.bak" \
-        "$_menu_conf.bak" \
+    #    "$_menu_conf.bak" \
     )
 
     Make_Directories $_test_mode \
@@ -75,7 +75,7 @@ function Install_Desktop_Config {
     local _copy_cmd=( \
         "mkdir -v -p $_sys_desktop_dir" \
         "cp -v -p $_install_from/$_lxterm_conf_file $_sys_desktop_dir/$_lxterm_conf_file" \
-        "cp -v -p $_install_from/$_menu_conf_file $_sys_desktop_dir/$_menu_conf_file" \
+    #    "cp -v -p $_install_from/$_menu_conf_file $_sys_desktop_dir/$_menu_conf_file" \
     )
 
     Execute_Commands_List \
@@ -85,12 +85,12 @@ function Install_Desktop_Config {
 
     local _symlink_destination=( \
         "$_sys_desktop_dir/$_lxterm_conf_file" \
-        "$_sys_desktop_dir/$_menu_conf_file" \
+    #    "$_sys_desktop_dir/$_menu_conf_file" \
     )
 
     local _symlink_target=( \
         "$_lxterm_conf" \
-        "$_menu_conf" \
+    #    "$_menu_conf" \
     )
 
     Create_Symlinks $_test_mode \

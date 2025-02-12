@@ -33,10 +33,28 @@ Installation:
 
     run vim once to install/update all plugins
 
-5. 
+    * this script will install python3-autopep8 thru apt
+    * so that vim does not run into autopep8 not found 
+    * error when saving .py files. However, once Python venv
+    * is installed and setup, the autopep within the venv would
+    * be used instead.
+
+5. Install Python
+
+    cd ~/src/setup-pi-os-bookworm/python
+    ./install_python.sh
+
+    * python 3.11 was preinstalled on pi os
+    * this installation make use of python venv
 
 
+6. Install LX Terminal Config file.
 
+    cd ~/src/setup-pi-os-bookworm/lxterminal
+    ./install-lxterminal-conf.sh
 
-
+    * this is totally optional
+    * old version of pi os used to store menu as 
+    * a text file which has been changed, and that
+    * part of the installation has been removed
 
