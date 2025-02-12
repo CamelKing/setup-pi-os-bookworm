@@ -29,6 +29,8 @@ function Install_Vim {
     local _apt_package_name="vim-nox"
     
     # need to install autopep8 separately to format python code
+    # this is a backup call, once python with venv is actiavted
+    # the copy installed in the venv will be used instead
     local _apt_autopep8_name="python3-autopep8"
 
     local _dot_vim_dir="$_install_to/.vim"
