@@ -35,10 +35,10 @@
 #------------
 
     # set file related utilities auto colored
-    alias ls='ls -hGt --color=auto'
-    alias l='ls -1F'
-    alias la='ls -AF'
-    alias ll='ls -lAF'
+    alias ls='ls -hGtF --color=auto --group-directories-first'
+    alias l='ls -1'
+    alias la='ls -A'
+    alias ll='ls -lA'
 
     alias dir='dir --color=auto'
     alias vdir='vdir --color=auto'
@@ -114,6 +114,15 @@
 
     alias pyref='xdg-open https://docs.python.org/3/reference/index.html'
     alias pylib='xdg-open https://docs.python.org/3/library/index.html'
+
+#}}}
+ 
+
+# Activate Python Virtual Environment {{{1
+#-------------------------------------
+
+    alias pyon='source ~/.sys/python/bin/activate'
+    alias pyoff='deactivate'
 
 #}}}
  

@@ -208,6 +208,5 @@
 # Welcome message
 #-----------------
 cls
-fortune -s | cowsay -f stegosaurus | lolcat --seed 0 --spread 1.0
-# fortune -s | cowsay -f $(ls /usr/share/cowsay/cows | shuf -n1) | lolcat --seed 0 --spread 1.0
+cowsay -f stegosaurus "Use pyon/pyoff to activate/deactivate Python Environment" | lolcat --seed 0 --spread 1.0
 echo ""
