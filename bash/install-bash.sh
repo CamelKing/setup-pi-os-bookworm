@@ -61,13 +61,13 @@ function Install_Bash {
 
     Copy_Files $_test_mode \
                "$_program_name files" \
-	             "${_copy_from[@]}" \
-	             "${_copy_to[@]}"
+	       "${_copy_from[@]}" \
+	       "${_copy_to[@]}"
 
     Create_Symlinks $_test_mode \
                     "$_program_name symlinks" \
-	                  "${_symlink_destination[@]}" \
-	                  "${_symlink_target[@]}"
+	            "${_symlink_destination[@]}" \
+	            "${_symlink_target[@]}"
 
 
     local _apt_install_cmd=( \

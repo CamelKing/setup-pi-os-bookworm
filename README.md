@@ -2,9 +2,8 @@
 
 Installation:
 
-1. Pi-OS bookworm gas git pre-installed.
 
-2. Clone setup-pi-os-bookworm to local:
+1. Clone setup-pi-os-bookworm to local:
 
     cd
     mkdir src
@@ -13,8 +12,31 @@ Installation:
     cd setup-pi-os-bookworm
     ls
 
-3. Install Vim:
+2. Install Git.
 
-    sudo apt install vim
+    * Pi-OS bookworm has git pre-installed,
+    * this will install the git completion prompt.
+    cd ~/src/setup-pi-os-bookworm/git
+    ./install_git.sh
 
-4. 
+3. Install Bash configuration file and utilities.
+
+    cd ~/src/setup-pi-os-bookworm/bash
+    ./install_bash.sh
+    cd 
+    source ~/.bashrc
+
+4. Install Vim:
+
+    cd ~/src/setup-pi-os-bookworm/vim
+    ./install_vim.sh
+
+    run vim once to install/update all plugins
+
+5. 
+
+
+
+
+
+

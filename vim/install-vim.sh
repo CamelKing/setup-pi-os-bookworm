@@ -23,10 +23,14 @@ function Install_Vim {
     local _install_from="$(dirname $(readlink -f $0))" 
 
     local _program_name="vim"
+    local _autopep8_program_name="autopep8"
 
-    # install vim-nox variants to get python3 support in vim
+    # need this version of vim for support of python scripting
     local _apt_package_name="vim-nox"
     
+    # need to install autopep8 separately to format python code
+    local _apt_autopep8_name="python3-autopep8"
+
     local _dot_vim_dir="$_install_to/.vim"
 
     local _dirs_to_create=( \
@@ -93,6 +97,10 @@ function Install_Vim {
     Execute $_test_mode \
             "sudo apt install $_apt_package_name -y" \
             "===> Installing $_program_name" 
+
+    Execute $_test_mode \
+            "sudo apt install $_apt_autopep8_name -y" \
+            "===> Installing $_autopep8_program_name" 
 
     Make_Directories $_test_mode \
                      "$_program_name" \
